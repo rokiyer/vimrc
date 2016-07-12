@@ -1,4 +1,8 @@
 # tmux 
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+
+
 ## tmux session
   - ls
   - create-session -t 
@@ -37,3 +41,5 @@
   * Describe my changes
   * Mention all the members of my team
     * Ask for feedback
+
+
