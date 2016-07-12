@@ -1,9 +1,12 @@
 # tmux 
 ## tmux session 管理
-  * create-session -t 
+  - ls
+  - create-session -t 
+  * kill-session -t session-name
   * rename-session -t current new
   
 ## tmux windows 管理
+
 
 
 ## task list
