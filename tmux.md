@@ -1,11 +1,20 @@
 # tmux 
-## tmux session 管理
+## tmux session
   - ls
   - create-session -t 
-  * kill-session -t session-name
-  * rename-session -t current new
+  - kill-session -t session-name
+  - rename-session -t current new
+  - attach(a) -t session-name
+  - detach(ctrl+d) 
   
-## tmux windows 管理
+## tmux windows
+  - mod + w
+  - mod + #
+
+
+## tmux panel 
+  - mod + arrow left right up down 
+  - mod + | - 
 
 
 
