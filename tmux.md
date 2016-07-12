@@ -9,7 +9,9 @@
   
 ## tmux windows
   - mod + w
+  - mod + c
   - mod + #
+  - mod + ,name OR mod + :rename-window name
 
 
 ## tmux panel 
