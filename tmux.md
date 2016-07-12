@@ -4,8 +4,6 @@
   * rename-session -t current new
   
 ## tmux windows 管理
-  * xxx
-  * xx
 
 
 ## task list
