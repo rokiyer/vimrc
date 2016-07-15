@@ -7,7 +7,9 @@ Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle, required
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 " End of My Plugin
 
 call vundle#end()            " required
@@ -20,24 +22,25 @@ set number
 set ruler
 
 
-
-
 " For solarized plugin (color scheme)
 " https://github.com/altercation/vim-colors-solarized
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme desert 
 
 " For vim-airline (status/tabline for vim)
 " https://github.com/vim-airline/vim-airline
 set laststatus=2
-let g:airline_theme="papercolor" 
+let g:airline_theme="powerlineish" 
 let g:airline_powerline_fonts = 1   
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#whitespace#enabled = 0
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
-let g:airline#extensions#whitespace#enabled = 1
-let g:airline#extensions#whitespace#symbol = '!'
 
+
+" NERDTree config 
+map <F2> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")&&b:NERDTreeType == "primary") | q | endif
 
