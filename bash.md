@@ -61,6 +61,7 @@ _=/usr/bin/printenv
 
 ### sed
 0. ref: http://coolshell.cn/articles/9104.html
+1. sed –n：不打印 | sed –f scriptname | sed -e 多条命令 | sed -i 修改写回原文
 1. Simple: `sed "s/my/Hao Chen's/g" pets.txt` 
 2. Naive: `sed 's/^/#/g' pets.txt` 给每一行的前面加上#
 3. 替换结果重定向: `sed "s/my/Hao Chen's/g" pets.txt > hao_pets.txt` , `sed -i "s/my/Hao Chen's/g" pets.txt`
