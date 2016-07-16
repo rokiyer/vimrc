@@ -31,3 +31,16 @@ echo $PATH | cut -d ':' -f 3,5
 ```bash
 export | cut -c 12-20
 ```
+
+
+## Environment
+1. System wide for all users
+  - `/etc/profile` : PATH, USER, MAIL, HOSTNAME and HISTSIZE.
+  - `/etc/bashrc` : shell specific
+2. Individual user configuration files
+  - `~/.bash_profile` : users can add extra configuration options or change default settings:
+  - `~/.bash_login` : normally only executed when you log in to the system
+  - `~/.bash_logout` : ...
+  - `~/.profile` : accessible by other shells
+  - `~/.bashrc` : aliases, variables after `/etc/bashrc`
+3. 让配置文件当即生效： `source ~/.bashrc`
