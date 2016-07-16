@@ -20,3 +20,14 @@ Doug Kramer (Google.com) says:
 1. the shell parses the arguments BEFORE passing them on to the program being called.
 2. The shell does not care about types of variables; they may store strings, integers, real numbers - anything you like. 
 3. USER_NAME_file -> ${USER_NAME}_file: enclose the variable itself in curly brackets.
+
+## cut 
+0. 对每一行进行处理
+1. -d 对某个字符进行分割，-f 取出第几个字段
+```bash
+echo $PATH | cut -d ':' -f 3,5
+```
+2. -c 取出某一段字符
+```bash
+export | cut -c 12-20
+```

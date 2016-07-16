@@ -9,7 +9,10 @@
 5. Ctrl+w >,<,+,- 移动窗口边界
 
 ### Tabs
-1. tabnew tabc tabp
+1. 打开关闭 - tabnew tabc 
+2. 切换tab - tabp gt Gt
+3. 使用NerdTree打开文件在新标签 - 在文件上按 t
+
 
 
 ##  补全和跳转
