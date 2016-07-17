@@ -61,20 +61,20 @@ _=/usr/bin/printenv
 
 ### sed
 1. ref: http://coolshell.cn/articles/9104.html
--. sed –n：不打印 | sed –f scriptname | sed -e 多条命令 | sed -i 修改写回原文
--. Simple: `sed "s/my/Hao Chen's/g" pets.txt` 
--. Naive: `sed 's/^/#/g' pets.txt` 给每一行的前面加上#
--. 替换结果重定向: `sed "s/my/Hao Chen's/g" pets.txt > hao_pets.txt` , `sed -i "s/my/Hao Chen's/g" pets.txt`
--. [✕] `sed 's/<.*>//g' html.txt` [○] `sed 's/<[^>]*>//g' html.txt`
--. 多个匹配 `sed -e '1,3s/my/your/g' -e '3,$s/This/That/g' my.txt`
--. 圆括号匹配 `sed 's/This is my \([^,]*\),.*is \(.*\)/\1:\2/g' my.txt`
+- sed –n：不打印 | sed –f scriptname | sed -e 多条命令 | sed -i 修改写回原文
+- Simple: `sed "s/my/Hao Chen's/g" pets.txt` 
+- Naive: `sed 's/^/#/g' pets.txt` 给每一行的前面加上#
+- 替换结果重定向: `sed "s/my/Hao Chen's/g" pets.txt > hao_pets.txt` , `sed -i "s/my/Hao Chen's/g" pets.txt`
+- [✕] `sed 's/<.*>//g' html.txt` [○] `sed 's/<[^>]*>//g' html.txt`
+- 多个匹配 `sed -e '1,3s/my/your/g' -e '3,$s/This/That/g' my.txt`
+- 圆括号匹配 `sed 's/This is my \([^,]*\),.*is \(.*\)/\1:\2/g' my.txt`
 正则为：This is my ([^,]*),.*is (.*)
 匹配为：This is my (cat),……….is (betty)
 然后：\1就是cat，\2就是betty
--. 奇偶行替换:
+- 奇偶行替换:
 before:
 ```
-vThis is your cat
+This is your cat
   my cat's name is betty
 This is your dog
   my dog's name is frank
@@ -92,20 +92,20 @@ This is my dog,  my dog's name is frank
 This is my fish,  my fish's name is george
 This is my goat,  my goat's name is adam
 ```
--. a命令和i命令 添加和插入
+- a命令和i命令 添加和插入
 `sed "1 i This is my monkey, my monkey's name is wukong" my.txt`
 `sed "$ a This is my monkey, my monkey's name is wukong" my.txt`
 `sed "/fish/a This is my monkey, my monkey's name is wukong" my.txt` # 注意其中的/fish/a，这意思是匹配到/fish/后就追加一行
 `sed "/my/a ----" my.txt`  # 所有找到的地方都添加
--. c命令 替换匹配行
+- c命令 替换匹配行
 `sed "2 c This is my monkey, my monkey's name is wukong" my.txt`
 `sed "/fish/c This is my monkey, my monkey's name is wukong" my.txt`
--. d命令 删除匹配行
+- d命令 删除匹配行
 `sed '/fish/d' my.txt`
 `sed '2,$d' my.txt` # 从第二行删完
--. p命令 复制匹配行
+- p命令 复制匹配行
 `sed '/fish/p' my.txt`
--. 原理：Pattern Space ＋ Address ＋ Hold Space
+- 原理：Pattern Space ＋ Address ＋ Hold Space
 
 ### awk
 1. ref : http://coolshell.cn/articles/9070.html
