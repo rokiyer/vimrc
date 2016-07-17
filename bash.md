@@ -21,16 +21,6 @@ Doug Kramer (Google.com) says:
 2. The shell does not care about types of variables; they may store strings, integers, real numbers - anything you like. 
 3. USER_NAME_file -> ${USER_NAME}_file: enclose the variable itself in curly brackets.
 
-## cut 
-0. 对每一行进行处理
-1. -d 对某个字符进行分割，-f 取出第几个字段
-```bash
-echo $PATH | cut -d ':' -f 3,5
-```
-2. -c 取出某一段字符
-```bash
-export | cut -c 12-20
-```
 
 
 ## Environment
@@ -61,6 +51,8 @@ _=/usr/bin/printenv
 
 ### sed
 1. ref: http://coolshell.cn/articles/9104.html
+- ref: http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_05_01.html
+- A Stream EDitor is used to perform basic transformations on text read from a file or a pipe. 
 - sed –n：不打印 | sed –f scriptname | sed -e 多条命令 | sed -i 修改写回原文
 - Simple: `sed "s/my/Hao Chen's/g" pets.txt` 
 - Naive: `sed 's/^/#/g' pets.txt` 给每一行的前面加上#
@@ -143,6 +135,22 @@ END {
 ```
 - 行的长度 length `awk 'length>80' file`
 
+
+## cut 
+1. 对每一行进行处理
+-  -d 对某个字符进行分割，-f 取出第几个字段
+```bash
+echo $PATH | cut -d ':' -f 3,5
+```
+-  -c 取出某一段字符
+```bash
+export | cut -c 12-20
+```
+
+
+#grep 
+1. grep searches the input files for lines containing a match to a given pattern list. -> stardard output
+-  
 
 ### Directory Structure
 ref: http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/dirstructure.html
