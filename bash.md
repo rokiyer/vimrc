@@ -35,6 +35,9 @@ Doug Kramer (Google.com) says:
   - `~/.bashrc` : aliases, variables after `/etc/bashrc`
 3. 让配置文件当即生效： `source ~/.bashrc`
 
+## Conditional statements
+
+## Writing interactive scripts
 
 ## Variables
 1. Global Variables: available in all shells. Some interesting ones of `printenv`
@@ -48,6 +51,17 @@ _=/usr/bin/printenv
 ```
 2. Local Variables: 
 3. 
+
+## More on variables
+1. ref: http://tldp.org/LDP/Bash-Beginners-Guide/html/chap_10.html
+-  Array variables
+
+## Functions
+
+
+## Catching signals
+
+
 
 ### sed
 1. ref: http://coolshell.cn/articles/9104.html
