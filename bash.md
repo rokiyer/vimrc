@@ -111,6 +111,8 @@ This is my goat,  my goat's name is adam
 1. ref : http://coolshell.cn/articles/9070.html
 - `netstat | awk '{print $1, $4}'` # $0 表示整个行
 - `netstat | awk '$3==0 && $6=="LISTEN" || NR==1 {printf "%-20s %-20s %s\n",$4,$5,$6}'` # 过滤记录
+- `awk  'BEGIN{FS=":"} {print $1,$3,$6}' /etc/passwd` 设置字段的分隔符：FS 默认是空格或Tab
+也可使用-F指定：`awk  -F: '{print $1,$3,$6}' OFS="\t" /etc/passwd`
 
 
 ### Directory Structure
