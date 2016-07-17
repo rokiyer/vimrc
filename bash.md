@@ -113,6 +113,35 @@ This is my goat,  my goat's name is adam
 - `netstat | awk '$3==0 && $6=="LISTEN" || NR==1 {printf "%-20s %-20s %s\n",$4,$5,$6}'` # 过滤记录
 - `awk  'BEGIN{FS=":"} {print $1,$3,$6}' /etc/passwd` 设置字段的分隔符：FS 默认是空格或Tab
 也可使用-F指定：`awk  -F: '{print $1,$3,$6}' OFS="\t" /etc/passwd`
+- 统计 `ls -l  *.cpp *.c *.h | awk '{sum+=$5} END {print sum}'`
+- BEGIN{ 这里面放的是执行前的语句 } END {这里面放的是处理完所有的行后要执行的语句 } {这里面放的是处理每一行时要执行的语句}
+```bash
+$ cat cal.awk
+#!/bin/awk -f
+#运行前
+BEGIN {
+    math = 0
+    english = 0
+    computer = 0
+ 
+    printf "NAME    NO.   MATH  ENGLISH  COMPUTER   TOTAL\n"
+    printf "---------------------------------------------\n"
+}
+#运行中
+{
+    math+=$3
+    english+=$4
+    computer+=$5
+    printf "%-6s %-6s %4d %8d %8d %8d\n", $1, $2, $3,$4,$5, $3+$4+$5
+}
+#运行后
+END {
+    printf "---------------------------------------------\n"
+    printf "  TOTAL:%10d %8d %8d \n", math, english, computer
+    printf "AVERAGE:%10.2f %8.2f %8.2f\n", math/NR, english/NR, computer/NR
+}
+```
+- 行的长度 length `awk 'length>80' file`
 
 
 ### Directory Structure
