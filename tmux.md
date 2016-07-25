@@ -5,7 +5,7 @@
   - ls
   - create-session -t 
   - kill-session -t session-name
-  - rename-session -t current new
+  - rename-session -t current new  | shortcut mod + $
   - attach(a) -t session-name
   - detach(ctrl+d) 
 
