@@ -1,7 +1,5 @@
 # tmux 
 
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
-
 
 ## tmux session
   - ls
@@ -42,4 +40,6 @@
   * Mention all the members of my team
     * Ask for feedback
 
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
