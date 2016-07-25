@@ -2,7 +2,7 @@
 
 
 ## tmux session
-  - ls
+  - ls | list-session | shortcut mod + s
   - create-session -t 
   - kill-session -t session-name
   - rename-session -t current new  | shortcut mod + $
