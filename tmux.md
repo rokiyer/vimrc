@@ -10,15 +10,15 @@
   - detach(ctrl+d) 
 
 ## tmux windows
-  - mod + w
-  - mod + c
-  - mod + #
+  - mod + w :  to list windows
+  - mod + c : to create window
+  - mod + # : to enter window
   - mod + ,name OR mod + :rename-window name
 
 
 ## tmux panel 
-  - mod + hjkl : to select panel 
   - mod + % " : to separate panel 
+  - mod + hjkl : to select panel 
   - mod + Ctrl + HJKL : to resize panel 
   - mod + q : to show panel number, then enter the number you want to enter
 
