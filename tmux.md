@@ -8,7 +8,7 @@
   - rename-session -t current new
   - attach(a) -t session-name
   - detach(ctrl+d) 
-  
+
 ## tmux windows
   - mod + w
   - mod + c
@@ -17,8 +17,10 @@
 
 
 ## tmux panel 
-  - mod + arrow left right up down 
-  - mod + | - 
+  - mod + hjkl : to select panel 
+  - mod + % " : to separate panel 
+  - mod + Ctrl + HJKL : to resize panel 
+  - mod + q : to show panel number, then enter the number you want to enter
 
 
 
